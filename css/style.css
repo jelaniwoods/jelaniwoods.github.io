@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+
+body {
+  font-family: 'Raleway', sans-serif !important;
+}
+.hero {
+  height: 100vh;
+  /* min-height: 645px; */
+  /*  TODO fix pixelation on zoom*/
+  -webkit-transition: all .5s ease-in-out; /* Safari and Chrome */
+  -moz-transition: all .5s ease-in-out; /* Firefox */
+  -ms-transition: all .5s ease-in-out; /* IE 9 */
+  -o-transition: all .5s ease-in-out; /* Opera */
+  transition: all .5s ease-in-out;
+  background-color: #D9DBF1;
+
+}
+#home {
+
+  /* background-image: url('../assets/actor.jpg');
+  background-size: cover; */
+}
+.msg {
+  padding:20px;
+  font-size: 65px;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 900;
+}
+.skills {
+  /* height: 400px; */
+  /* background-color: #727076; */
+  background-color: #D0CDD7;
+  padding-bottom: 2em;
+}
+.skills h3 {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.work {
+  height: 100%;
+  /* border: 2em solid black; */
+  /* background-color: lightpink; */
+}
+.modal-dialog {
+  max-width: 700px !important;
+}
+.blocks {
+  background-color: pink;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 1px;
+  padding-right: 1px;
+  margin-bottom: 1em;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+.beforeFooter {
+  /* height: 400px; */
+  padding-top: 4em;
+  padding-bottom: 4em;
+  /* color: #D9DBF1; */
+  background-color: #F5F8DE;
+}
+.socials {
+  padding-top: 6em;
+  padding-bottom: 4em;
+  background-color: #360809;
+  color: #F5F8DE;
+}
+.social-icons {
+  /* margin-left: -2em; */
+}
+.social-icons a:hover {
+  text-decoration: none;
+  color: black;
+}
+.social-icons a {
+  color: #F5F8DE;
+  transition: color .1s ease-in-out;
+}
+.icon {
+  fill: currentColor !important;
+  position: relative;
+  transition: top .1s ease-in-out;
+}
+.icon:hover {
+  top: -2px;
+}
+.iconX {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    background-color: #D0CDD7;
+    /* background-color: #727076; */
+    opacity: 1;
+    position: relative;
+    top: 0;
+    transition: top .1s ease-in-out;
+}
+.iconX:hover {
+  top: 2px;
+}
+#contact_butt {
+  border-radius: .3rem;
+  transition: border-radius .2s ease-in-out;
+}
+#contact_butt:hover {
+  border-radius: 1rem;
+}
+#arrow {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 2px;
+}
+#arrow svg {
+  fill: black;
+  transition: fill .3s ease-in-out;
+}
+#arrow svg:hover {
+  fill: white;
+}
+hr {
+  width: 24%;
+  border-top-color: black !important;
+}
+.col-xl-4 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.skill {
+  /* border: 1px solid black; */
+  padding-bottom: 1em;
+  margin-top: -35px;
+}
+.skill-text {
+  /* border: 1px dashed blue; */
+}
+.card {
+  border: 1px solid black;
+  overflow: hidden;
+  /* opacity: 0; */
+}
+.rh {
+  max-height: 360px;
+}
+#p {
+  width: 225px;
+  margin: 0 auto;
+  height: auto;
+}
+#p_wireframe {
+  width: 150%;
+  height: auto;
+}
+#hy {
+  text-align: center;
+  height: 355px;
+  position: sticky;
+  top: 40%;
+  font-size: 3.5em;
+}
+#ama {
+  width: 285px;
+  margin: 0 auto;
+}
+.card-img {
+  opacity: 1;
+
+  /*  TODO fix pixelation on zoom*/
+  -webkit-transition: all .5s ease; /* Safari and Chrome */
+  -moz-transition: all .5s ease; /* Firefox */
+  -ms-transition: all .5s ease; /* IE 9 */
+  -o-transition: all .5s ease; /* Opera */
+  transition: all .5s ease;
+}
+.card-img:hover {
+  -webkit-transform:scale(1.15); /* Safari and Chrome */
+  -moz-transform:scale(1.15); /* Firefox */
+  -ms-transform:scale(1.15); /* IE 9 */
+  -o-transform:scale(1.15); /* Opera */
+  transform:scale(1.15);
+}
+.card-img-overlay {
+  opacity: 0;
+  /* z-index: 1; */
+}
+.card-img-overlay:hover {
+  opacity: 1;
+}
+
+.beforeSkill {
+  /* background-color: #D0CDD7; */
+  background-color: #807182;
+}
+/* The Close Button */
+.closer {
+    color: #aaa;
+    /* top: -23px; */
+    /* text-align: right; */
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    left: 95%;
+}
+
+.row .col-6 img {
+  width: 100%;
+}
+#work1 .modal-dialog,#work2 .modal-dialog,#work3 .modal-dialog,#work4 .modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+.work {
+  background-color: #807182;
+  /* background-color: #416165; */
+}
+
+.skill h5 {
+  text-align: center;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #807182;
+    color: white;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+    transition: border-color .3s ease-in-out;
+    transition: border-radius .2s ease-in-out;
+}
+input[type=submit]:hover {
+    background-color: #D9DBF1;
+    color: black;
+    border: .5px solid black;
+    border-radius: 1.2em;
+}
+
+/* Add a background color and some padding around the form */
+#contact-form {
+    border-radius: 5px;
+    background-color: #101010;
+    padding: 20px;
+}

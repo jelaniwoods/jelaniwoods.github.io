@@ -170,6 +170,7 @@ hr {
 .card-img {
   opacity: 1;
   min-height: 357px;
+  max-height: fit-content;
   /*  TODO fix pixelation on zoom*/
   -webkit-transition: all .5s ease; /* Safari and Chrome */
   -moz-transition: all .5s ease; /* Firefox */

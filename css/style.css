@@ -75,10 +75,17 @@ body {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius 0.5s ease-in-out, width .5s ease-in-out !important;
 }
 .btn-outline-dark {
-  color: #EFE358;
-  background-color: #5966F2;
-  background-image: none;
-  border-color: #5966F2;
+  color: #EFE358 !important;
+  background-color: #5966F2 !important;
+  background-image: none !important;
+  border-color: #5966F2 !important;
+}
+.btn-outline-dark:hover {
+  color: #5966F2 !important;
+  border-radius: 10px !important;
+  width: 120px !important;
+  background-color: #EFE358 !important;
+  border-color: #5966F2 !important;
 }
 .socials {
   padding-top: 6em;

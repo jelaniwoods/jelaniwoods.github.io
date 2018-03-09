@@ -70,7 +70,9 @@ body {
   background-color: #EFE358;
   /* background-color: #F5F8DE; */
 }
-
+.col-lg-4 h1, col-lg-4 h3 {
+  -webkit-text-stroke: 1px #5966F2;
+}
 .btn {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius 0.5s ease-in-out, width .5s ease-in-out !important;
 }

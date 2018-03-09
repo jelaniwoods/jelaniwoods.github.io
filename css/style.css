@@ -4,7 +4,7 @@ body {
   font-family: 'Raleway', sans-serif !important;
 }
 .hero {
-  height: 100vh;
+  height: 80vh;
   /* min-height: 645px; */
   /*  TODO fix pixelation on zoom*/
   -webkit-transition: all .5s ease-in-out; /* Safari and Chrome */
@@ -12,7 +12,8 @@ body {
   -ms-transition: all .5s ease-in-out; /* IE 9 */
   -o-transition: all .5s ease-in-out; /* Opera */
   transition: all .5s ease-in-out;
-  background-color: #D9DBF1;
+  /* background-color: #D9DBF1; */
+  background-color: #5966F2;
 
 }
 #home {
@@ -20,12 +21,19 @@ body {
   /* background-image: url('../assets/actor.jpg');
   background-size: cover; */
 }
+.container-fluid {
+  background-color: whitesmoke;
+}
 .msg {
   padding:20px;
   font-size: 65px;
   text-align: center;
   margin: 0 auto;
   font-weight: 900;
+}
+.typewriter-msg {
+  color: #EFE358;
+  text-decoration: underline;
 }
 .skills {
   background-color: white;
@@ -37,6 +45,7 @@ body {
 }
 .work {
   height: 100%;
+  background-color: #474747;
   /* border: 2em solid black; */
   /* background-color: lightpink; */
 }
@@ -58,12 +67,23 @@ body {
   padding-top: 4em;
   padding-bottom: 4em;
   /* color: #D9DBF1; */
-  background-color: #F5F8DE;
+  background-color: #EFE358;
+  /* background-color: #F5F8DE; */
+}
+
+.btn {
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius 0.5s ease-in-out, width .5s ease-in-out !important;
+}
+.btn-outline-dark {
+  color: #EFE358;
+  background-color: #5966F2;
+  background-image: none;
+  border-color: #5966F2;
 }
 .socials {
   padding-top: 6em;
   padding-bottom: 4em;
-  background-color: #360809;
+  background-color: #212658;
   color: #F5F8DE;
 }
 .social-icons {
@@ -71,11 +91,11 @@ body {
 }
 .social-icons a:hover {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .social-icons a {
-  color: #F5F8DE;
-  transition: color .1s ease-in-out;
+  color: #EFE358;
+  transition: color .2s ease-in-out;
 }
 .icon {
   fill: currentColor !important;
@@ -92,7 +112,7 @@ body {
     padding: 10px;
     /* border: 1px solid black; */
     margin: 0 auto;
-    background-color: white;
+    background-color: whitesmoke;
     /* background-color: #727076; */
     opacity: 1;
     position: relative;
@@ -189,7 +209,8 @@ hr {
 }
 
 .beforeSkill {
-  background-color: #A0083D;
+  background-color: #474747;
+  color: #F8E77A;
   /* background-color: #807182; */
 }
 /* The Close Button */

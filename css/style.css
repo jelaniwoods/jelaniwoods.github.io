@@ -44,8 +44,8 @@ body {
   padding-bottom: 1em;
 }
 .work {
-  height: 100%;
-  background-color: #474747;
+  /* height: 100%;
+  background-color: #474747; */
   /* border: 2em solid black; */
   /* background-color: lightpink; */
 }
@@ -239,7 +239,7 @@ hr {
 
 .work {
   /* background-color: #807182; */
-  background-color: #A0083D;
+  background-color: #474747;
 }
 
 .skill h5 {

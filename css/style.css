@@ -189,7 +189,7 @@ hr {
 }
 
 .beforeSkill {
-  background-color: #F7883D;
+  background-color: #A0083D;
   /* background-color: #807182; */
 }
 /* The Close Button */
@@ -217,8 +217,8 @@ hr {
 }
 
 .work {
-  background-color: #807182;
-  /* background-color: #416165; */
+  /* background-color: #807182; */
+  background-color: #A0083D;
 }
 
 .skill h5 {

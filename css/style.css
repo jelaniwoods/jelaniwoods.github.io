@@ -28,9 +28,7 @@ body {
   font-weight: 900;
 }
 .skills {
-  /* height: 400px; */
-  /* background-color: #727076; */
-  background-color: #D0CDD7;
+  background-color: white;
   padding-bottom: 2em;
 }
 .skills h3 {
@@ -94,7 +92,7 @@ body {
     padding: 10px;
     /* border: 1px solid black; */
     margin: 0 auto;
-    background-color: #D0CDD7;
+    background-color: white;
     /* background-color: #727076; */
     opacity: 1;
     position: relative;
@@ -135,9 +133,6 @@ hr {
   /* border: 1px solid black; */
   padding-bottom: 1em;
   margin-top: -35px;
-}
-.skill-text {
-  /* border: 1px dashed blue; */
 }
 .card {
   border: 1px solid black;
@@ -194,8 +189,8 @@ hr {
 }
 
 .beforeSkill {
-  /* background-color: #D0CDD7; */
-  background-color: #807182;
+  background-color: #F7883D;
+  /* background-color: #807182; */
 }
 /* The Close Button */
 .closer {

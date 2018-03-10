@@ -74,7 +74,7 @@ body {
   -webkit-text-stroke: 1px #5966F2;
 }
 .btn {
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius 0.5s ease-in-out, width .5s ease-in-out !important;
+  transition: color .35s ease-in-out,background-color .35s ease-in-out,border-color .35s ease-in-out,box-shadow .35s ease-in-out,border-radius 0.5s ease-in-out, width .5s ease-in-out !important;
 }
 .btn-outline-dark {
   color: #EFE358 !important;

@@ -213,7 +213,11 @@ hr {
     width: auto !important;
     min-width: 50% !important;
     max-width: 100%;
+  }
+  .skill {
+    padding-bottom: 2em;
     margin: 0 auto;
+    width: 60% !important;
   }
 }
 .card-img:hover {

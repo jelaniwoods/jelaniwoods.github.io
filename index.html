@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
+<body onresize="handleResize()" onload="handleResize()">
   <div class="container-fluid">
     <div class="row hero" id="home">
       <div class="col-12">
@@ -49,7 +49,7 @@
             :speed="125"
             :full-erase="true"
             :interval="300"
-            :words='["Websites.","Landing Pages.", "Simple Logos.", "Web Applications."]'>
+            :words='["Websites.","Landing Pages.", "Simple Logos.", "Web Apps."]'>
             Hi, I'm Jelani. I design & build
             <br>
 
@@ -176,21 +176,28 @@
         <div class="row ">
           <div class="col-xl-4 ">
             <div class="card" data-toggle="modal" data-target="#work1" >
-              <img src="/assets/transparent_lotus.png" alt="green lotus logo" class="card-img" id="lotus">
+              <a id="lotus_link">
+                <img src="/assets/transparent_lotus.png" alt="green lotus logo" class="card-img" id="lotus">
+
+              </a>
             </div>
           </div>
           <div class="col-xl-4 ">
             <div class="card" data-toggle="modal" data-target="#work2" style="background-color: black; color: ghostwhite;">
-              <h2 class="card-img align-middle" id="hy">       
-                <br>
-                <br>
-                Hannah Yehudah
-              </h2> 
+              <a id="hy_link">
+                <h2 class="card-img align-middle" id="hy">       
+                  <br>
+                  <br>
+                  Hannah Yehudah
+                </h2> 
+              </a>
             </div>
           </div>
           <div class="col-xl-4 ">
             <div class="card" data-toggle="modal" data-target="#work3" style="background-color: #ABABAB;">
-              <img id="ama" src="/assets/ama.png" alt="Homepage design of alainamichaelart.tumblr.com" class="card-img">
+              <a id="ama_link">
+                <img id="ama" src="/assets/ama.png" alt="Homepage design of alainamichaelart.tumblr.com" class="card-img">
+              </a>
             </div>
           </div>
         </div>
@@ -201,7 +208,9 @@
           <div class="row ">
             <div class="col-xl-4 offset-xl-4 work">
               <div class="card" style="background-color: #D9DBF1;" data-toggle="modal" data-target="#work4">
-                <img id="p" src="/assets/productivity_logo_1.png" alt="Productivity Logo" class="card-img">
+                <a id="p_link">  
+                  <img id="p" src="/assets/productivity_logo_1.png" alt="Productivity Logo" class="card-img">
+                </a>
               </div>
             </div>
           </div>

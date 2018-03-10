@@ -43,6 +43,13 @@ body {
   padding-top: 2em;
   padding-bottom: 1em;
 }
+@media only screen and (max-width: 449px) {
+  .modal-content {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 .modal-dialog {
   max-width: 900px !important;
   text-align: center;
@@ -168,6 +175,13 @@ hr {
   overflow: hidden;
   /* opacity: 0; */
 }
+.card a {
+  text-align: center;
+  color: ghostwhite !important;
+}
+#hy_link:hover {
+  text-decoration: none;
+}
 .rh {
   max-height: 360px;
 }
@@ -207,7 +221,14 @@ hr {
   -o-transition: all .5s ease; /* Opera */
   transition: all .5s ease;
 }
-
+@media only screen and (max-width: 449px) {
+  #lotus {
+    width: auto !important;
+    min-width: 50% !important;
+    max-width: fit-content;
+    margin-left: -2.5em;
+  }
+}
 @media only screen and (max-width: 1199px) {
   #lotus {
     width: auto !important;

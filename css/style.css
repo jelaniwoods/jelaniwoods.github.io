@@ -4,7 +4,7 @@ body {
   font-family: 'Raleway', sans-serif !important;
 }
 .hero {
-  height: 80vh;
+  height: 100vh;
   /* min-height: 645px; */
   /*  TODO fix pixelation on zoom*/
   -webkit-transition: all .5s ease-in-out; /* Safari and Chrome */
@@ -37,21 +37,19 @@ body {
 }
 .skills {
   background-color: ghostwhite;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
 }
 .skills h3 {
   padding-top: 2em;
   padding-bottom: 1em;
 }
-.work {
-  /* height: 100%;
-  background-color: #474747; */
-  /* border: 2em solid black; */
-  /* background-color: lightpink; */
-}
 .modal-dialog {
-  max-width: 700px !important;
+  max-width: 900px !important;
   text-align: center;
+}
+.modal-body p {
+  padding-top: 2em;
+  line-height: 1.7em;
 }
 .blocks {
   background-color: ghostwhite;
@@ -66,7 +64,7 @@ body {
 }
 .beforeFooter {
   /* height: 400px; */
-  padding-top: 4em;
+  padding-top: 8em;
   padding-bottom: 4em;
   /* color: #D9DBF1; */
   background-color: #EFE358;
@@ -92,10 +90,10 @@ body {
   border-color: #5966F2 !important;
 }
 .socials {
-  padding-top: 6em;
-  padding-bottom: 4em;
+  padding-top: 10em;
+  padding-bottom: 2em;
   background-color: #212658;
-  color: #F5F8DE;
+  color: #EFE358;
 }
 .social-icons {
   /* margin-left: -2em; */
@@ -142,7 +140,7 @@ body {
 }
 #arrow {
   position: absolute;
-  bottom: 20%;
+  bottom: 0;
   padding-bottom: 2px;
 }
 #arrow svg {
@@ -184,10 +182,16 @@ hr {
 }
 #hy {
   text-align: center;
-  height: 355px;
+  /* height: 355px; */
   /* position: sticky; */
   /* top: 40%; */
   font-size: 3.5em;
+}
+#lotus {
+  width: fit-content;
+  /* min-width: 80%; */
+  height: auto;
+  margin: 0 auto;
 }
 #ama {
   width: 285px;
@@ -197,12 +201,20 @@ hr {
   opacity: 1;
   min-height: 357px;
   max-height: fit-content;
-  /*  TODO fix pixelation on zoom*/
   -webkit-transition: all .5s ease; /* Safari and Chrome */
   -moz-transition: all .5s ease; /* Firefox */
   -ms-transition: all .5s ease; /* IE 9 */
   -o-transition: all .5s ease; /* Opera */
   transition: all .5s ease;
+}
+
+@media only screen and (max-width: 1199px) {
+  #lotus {
+    width: auto !important;
+    min-width: 50% !important;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 .card-img:hover {
   -webkit-transform:scale(1.15); /* Safari and Chrome */
@@ -214,14 +226,15 @@ hr {
 .card-img-overlay {
   opacity: 0;
   transition: opacity .5s ease-in-out;
-
-  /* z-index: 1; */
 }
 .card-img-overlay:hover {
   opacity: 1;
 }
-
+.cardes {
+  max-height: 400px;
+}
 .beforeSkill {
+  padding-top: 4em;
   background-color: #474747;
   color: #F8E77A;
   /* background-color: #807182; */

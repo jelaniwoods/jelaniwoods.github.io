@@ -1,8 +1,31 @@
-function ScrollTo(name) {
-  // console.log(name + ' ddij' + document.getElementById(name));
-  ScrollToResolver(document.getElementById(name));
-}
 
+(function ($) {
+  $(document).ready(function(){
+    
+	// hide .navbar first
+	$(".navbar").hide();
+	
+	// fade in .navbar
+	$(function () {
+		$(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+			if ($(this).scrollTop() > 100) {
+				$('.navbar').fadeIn();
+			} else {
+				$('.navbar').fadeOut();
+			}
+		});
+
+	
+	});
+
+});
+  }(jQuery));
+
+  function ScrollTo(name) {
+    // console.log(name + ' ddij' + document.getElementById(name));
+    ScrollToResolver(document.getElementById(name));
+  }
 function ScrollToResolver(elem) {
   // console.log(elem + ' fiuh');
   var jump = parseInt(elem.getBoundingClientRect().top * .25);

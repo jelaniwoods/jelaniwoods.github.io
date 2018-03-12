@@ -281,9 +281,9 @@ hr {
   width: 100%;
 }
 #work1 .modal-dialog,#work2 .modal-dialog,#work3 .modal-dialog,#work4 .modal-dialog {
-    -webkit-transform: translate(0,-50%);
-    -o-transform: translate(0,-50%);
-    transform: translate(0,-50%);
+    -webkit-transform: translate(0,-47%);
+    -o-transform: translate(0,-47%);
+    transform: translate(0,-47%);
     top: 50%;
     margin: 0 auto;
 }

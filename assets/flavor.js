@@ -33,7 +33,7 @@ function ScrollToResolver(elem) {
   document.documentElement.scrollTop += jump;
   if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
     elem.lastjump = Math.abs(jump);
-    setTimeout(function() { ScrollToResolver(elem);}, "90");
+    setTimeout(function() { ScrollToResolver(elem);}, "50");
   } else {
     elem.lastjump = null;
   }

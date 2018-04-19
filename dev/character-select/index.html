@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <style>
+        body {
+            background: #444;
+            font-size: 24px;
+            font-size: 1.5rem;
+        }
+        div#gallery {
+            -webkit-perspective: 1200px;
+                    perspective: 1200px;
+        }
+        figure#spinner {
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+            min-height: 122px;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50% -500px;
+            -webkit-transition: 1s;
+            transition: 1s;
+        }
+        figure#spinner img {
+            width: 40%;
+            /* background-color: red; */
+            position: absolute;
+            left: 30%;
+            transform-origin-z: 50% 50% -500px;
+            -webkit-transform-origin-z: 50% 50% -500px;
+            outline: 1px solid transparent;
+            transition: all .5s linear;
+        }
+        figure#spinner img:nth-child(1) {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg) translateZ(360px);
+            background-color: red;
+        }
+        figure#spinner img:nth-child(2) {
+            /* -webkit-transform: rotateY(-120deg); */
+            transform:  translateX(360px) translateZ(-360px);
+            background-color: violet;
+        }
+        figure#spinner img:nth-child(3) {
+            transform:  translateX(-360px) translateZ(-360px);
+            background-color: lightblue;
+            /* -webkit-transform: rotateY(-240deg);
+            transform: rotateY(-240deg); */
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gallery">
+        <figure id="spinner">
+            <img src="homestuck_logo.png" alt>
+            <img src="locked.jpg" alt>
+            <img src="locked.jpg" alt>
+        </figure>
+        <a href="#" style="float: left" onclick="galleryspin('-')">◀</a>
+        <a href="#" style="float: right" onclick="galleryspin('')">▶</a>
+    </div>
+    <script>
+        var angle = 0;
+        var x1 = 0;
+        var z1 = 360;
+        var x2 = 360;
+        var z2 = -360;
+        var x3 = -360
+        var z3 = -360;
+        // 3 is really 2 and 2 is really 3
+
+        var stateR =  0;
+        var stateL =  0;
+        var state = 0
+        function galleryspin(sign) {
+            spinner = document.querySelector("#spinner");
+            one = document.querySelector("#spinner img:nth-child(1)");
+            two = document.querySelector("#spinner img:nth-child(2)");
+            three = document.querySelector("#spinner img:nth-child(3)");
+
+
+
+
+            if (!sign) { //RIGHT
+                angle = angle + 120;
+                console.log("RIGHT: " + state + " r: " + stateR + ' l: ' + stateL);
+
+                if (stateR == 0) {
+                    one.setAttribute("style","transform:  translateX(" + x2 + "px) translateZ(" + z2 + "px);");
+                    two.setAttribute("style","transform: translateX(" + x3 + "px) translateZ(" + z3 + "px);");
+                    three.setAttribute("style","transform:  translateX(" + x1 + "px) translateZ(" + z1 + "px);");
+                    // state++;
+                } else if (stateR == 1) {
+                    one.setAttribute("style","transform:  translateX(" + x3 + "px) translateZ(" + z3 + "px);");
+                    two.setAttribute("style","transform: translateX(" + x1 + "px) translateZ(" + z1 + "px);");
+                    three.setAttribute("style","transform:  translateX(" + x2 + "px) translateZ(" + z2 + "px);");
+                }
+                else if (stateR == 2){
+                    one.setAttribute("style","transform:  translateX(" + x1 + "px) translateZ(" + z1 + "px);");
+                    two.setAttribute("style","transform: translateX(" + x2 + "px) translateZ(" + z2 + "px);");
+                    three.setAttribute("style","transform:  translateX(" + x3 + "px) translateZ(" + z3 + "px);");
+                    // state = 0
+                }
+                state++;
+                stateR++;
+
+                if (stateL > 0)
+                    stateL = stateR - 1;
+                else if (stateR == 0 && stateL != 0)
+                    stateR = 1;
+            } else { //LEFT
+                console.log("Left " + state + " r: " + stateR + ' l: ' + stateL);
+                if (stateL == 0) {
+                    one.setAttribute("style","transform:  translateX(" + x3 + "px) translateZ(" + z3 + "px);");
+                    two.setAttribute("style","transform: translateX(" + x1 + "px) translateZ(" + z1 + "px);");
+                    three.setAttribute("style","transform:  translateX(" + x2 + "px) translateZ(" + z2 + "px);");
+                    // state++;
+                    // stateR = 2;
+                } else if (stateL == 1) {
+                    one.setAttribute("style","transform:  translateX(" + x2 + "px) translateZ(" + z2 + "px);");
+                    two.setAttribute("style","transform: translateX(" + x3 + "px) translateZ(" + z3 + "px);");
+                    three.setAttribute("style","transform:  translateX(" + x1 + "px) translateZ(" + z1 + "px);");
+                }
+                else if (stateL == 2) {
+                    one.setAttribute("style","transform:  translateX(" + x1 + "px) translateZ(" + z1 + "px);");
+                    two.setAttribute("style","transform: translateX(" + x2 + "px) translateZ(" + z2 + "px);");
+                    three.setAttribute("style","transform:  translateX(" + x3 + "px) translateZ(" + z3 + "px);");
+                    // stateL++;
+                    // state = 0;
+                    console.log('state 2')
+                }
+
+                state++;
+                stateL++;
+                if (stateR > 0)
+                    stateR = stateL - 1;
+                else if (stateR == 0 && stateL != 0)
+                    stateR = 1;
+            }
+            if (state == 3) {
+                state = 0;
+            }
+            if (stateR == 3) {
+                stateR = 0;
+                stateL = 0;
+            }
+            else if (stateL == 3) {
+                stateR = 0;
+                stateL = 0;
+            }
+            console.log('cur state ' + state + " r: " + stateR + ' l: ' + stateL);
+        }
+    </script>
+</body>
+</html>

@@ -261,8 +261,10 @@ hr {
 .beforeSkill {
   padding-top: 4em;
   padding-bottom: 2em;
-  background-color: #474747;
-  color: #F8E77A;
+  /* background-color: #474747; */
+  background-color: #F8F8E6;
+  color: #1e1e1e;
+  /* color: #F8E77A; */
   /* background-color: #807182; */
 }
 /* The Close Button */
@@ -297,7 +299,8 @@ hr {
 }
 .work {
   /* background-color: #807182; */
-  background-color: #474747;
+  /* background-color: #474747; */
+  background-color: #F8F8E6;
 }
 
 .skill h5 {

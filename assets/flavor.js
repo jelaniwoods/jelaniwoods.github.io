@@ -60,6 +60,11 @@ function handleResize() {
     }
   }
   else {
+    var cards = document.getElementsByClassName('card');
+    for (var i = 0; i < 4; i++) {
+      var temp = cards[i]; 
+      temp.setAttribute('data-toggle' , 'modal');
+    }
     lotus.removeAttribute("href");
     hy.removeAttribute("href");
     ama.removeAttribute("href");

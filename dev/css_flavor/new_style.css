@@ -668,14 +668,52 @@
   transform: rotateY(180deg); }
 
 .flipcard .front, .flipcard .back {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   box-sizing: border-box;
   transition: all 0.5s ease-in;
   color: white;
   background-color: #333;
   padding: 10px;
   backface-visibility: hidden; }
+
+.ripples {
+  padding: 2em; }
+
+.ripple-button1 {
+  background-color: #333;
+  position: relative;
+  border-radius: 3px;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  height: 20px;
+  width: 170px;
+  vertical-align: middle;
+  display: table-cell;
+  color: #ffffff; }
+
+.wave1, .wave2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 175px;
+  height: 175px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 300px;
+  transform: scale(0);
+  opacity: 0.5; }
+
+.ripple-button1:hover > .wave1 {
+  animation: ripple-in1 2s; }
+
+.ripple-button1:hover > .wave2 {
+  animation: ripple-in1 2.4s; }
 
 @keyframes pulse {
   50% {
@@ -907,5 +945,11 @@
     background-position: 0% 90%; }
   100% {
     background-position: 0% 100%; } }
+@keyframes ripple-in1 {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(3);
+    opacity: 0; } }
 
 /*# sourceMappingURL=new_style.css.map */

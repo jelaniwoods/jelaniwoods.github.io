@@ -1,0 +1,911 @@
+.links a {
+  display: inline-block;
+  padding: 1em;
+  color: azure;
+  background-color: #333;
+  margin-bottom: 3em;
+  margin-right: 1em;
+  text-decoration: none;
+  border: 1px solid #000;
+  transition: all 0.15s ease-in-out; }
+
+.grow:hover {
+  transform: scale(1.1, 1.1); }
+
+.shrink:hover {
+  transform: scale(0.85, 0.85); }
+
+.pulse:hover {
+  /* transform:  */
+  animation-name: pulse;
+  animation-duration: 0.75s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+.pulseGrow:hover {
+  animation-name: pulseGrow;
+  animation-duration: 0.85s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+.pulseShrink:hover {
+  animation-name: pulseShrink;
+  animation-duration: 0.75s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+.push:hover {
+  animation-name: push;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out; }
+
+.pop:hover {
+  animation-name: pop;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out; }
+
+.bounce-in, .bounce-out {
+  transition: all 0.15s linear; }
+
+/*TODO fix the 'ease-out part, the mouse leave part and make it smooth */
+.bounce-in:hover {
+  animation-name: bounceIn;
+  animation-duration: 430ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; }
+
+/*TODO fix the 'ease-out part, the mouse leave part and make it smooth */
+.bounce-out:hover {
+  animation-name: bounceOut;
+  animation-duration: 0.45s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; }
+
+.spin:hover {
+  animation-name: spin;
+  animation-duration: 0.85s;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  animation-fill-mode: both; }
+
+.rotate:hover {
+  transform: rotate(7.5deg); }
+
+.growtate:hover {
+  transform: rotate(5.5deg) scale(1.12, 1.12); }
+
+.float:hover {
+  transform: translate(0px, -10px); }
+
+.sink:hover {
+  transform: translate(0px, 10px); }
+
+.bob:hover {
+  animation-name: bob;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+.hang:hover {
+  transform: translate(0px, 5px);
+  animation-name: hang;
+  animation-duration: 0.8s;
+  /* animation-delay: .15s */
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+.skew:hover {
+  transform: skewX(-10deg); }
+
+.skew_forward:hover {
+  transform: matrix(1, 0, -0.2, 1, 10, 0); }
+
+.skew_backward:hover {
+  transform: matrix(1, 0, 0.2, 1, -10, 0); }
+
+.wobble_horizontal:hover {
+  animation: wobbleHorizontal 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+
+.wobble_vertical:hover {
+  animation-name: wobbleVertical;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.wobble_bottom_right:hover {
+  animation-name: wobbleBottomRight;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.wobble_top_right:hover {
+  animation-name: wobbleTopRight;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.wobble_bottom_left:hover {
+  animation-name: wobbleBottomLeft;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.wobble_top_left:hover {
+  animation-name: wobbleTopLeft;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.wobble_top:hover {
+  animation-name: wobbleTop;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.wobble_bottom:hover {
+  animation-name: wobbleBottom;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.wobble_skew:hover {
+  animation-name: wobbleSkew;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out; }
+
+.buzz:hover {
+  animation-name: buzz;
+  animation-duration: 0.22s;
+  animation-iteration-count: infinite; }
+
+.buzz_out:hover {
+  /* TODO can probably still just be the buzz animation */
+  animation-name: buzzOut;
+  animation-duration: 0.22s;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-out; }
+
+.forward:hover {
+  transform: translateX(10px); }
+
+.backward:hover {
+  transform: translateX(-10px); }
+
+.fade:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff; }
+
+.back_pulse:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+  animation-name: backPulse;
+  animation-delay: 0.3s;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite; }
+
+.sweep_right {
+  background-image: linear-gradient(to left, #333 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right; }
+
+.sweep_right:hover {
+  color: #000;
+  border-color: #fff;
+  background-position: bottom left;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in; }
+
+.sweep_left {
+  background-image: linear-gradient(to right, #333 50%, #fff 50%);
+  background-size: 201% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left; }
+
+.sweep_left:hover {
+  color: #000;
+  /* border-color: #fff */
+  background-position: bottom right;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in; }
+
+.sweep_bottom {
+  background-image: linear-gradient(to top, #333 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: bottom; }
+
+.sweep_bottom:hover {
+  color: #000;
+  /* border-color: #fff */
+  background-position: top;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in; }
+
+.sweep_top {
+  background-image: linear-gradient(to bottom, #333 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: top; }
+
+.sweep_top:hover {
+  color: #000;
+  /* border-color: #fff */
+  background-position: bottom;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in; }
+
+.bounce_right {
+  background-image: linear-gradient(to left, #333 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right; }
+
+.bounce_right:hover {
+  color: #000;
+  border-color: #fff;
+  animation-name: bounceRight;
+  animation-duration: 0.3s;
+  background-position: 0% 0%;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+
+.bounce_left {
+  background-image: linear-gradient(to right, #333 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left; }
+
+.bounce_left:hover {
+  color: #000;
+  border-color: #fff;
+  animation-name: bounceLeft;
+  animation-duration: 0.3s;
+  background-position: 100% 0%;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+
+.bounce_bottom {
+  background-image: linear-gradient(to top, #333 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: bottom; }
+
+.bounce_bottom:hover {
+  color: #000;
+  border-color: #fff;
+  animation-name: bounceBottom;
+  animation-duration: 0.3s;
+  background-position: 0% 0%;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+
+.bounce_top {
+  background-image: linear-gradient(to bottom, #333 50%, #fff 50%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: top; }
+
+.bounce_top:hover {
+  color: #000;
+  border-color: #fff;
+  animation-name: bounceTop;
+  animation-duration: 0.3s;
+  background-position: 0% 100%;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out; }
+
+.radial_out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+  background: #333;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.radial_out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.radial_out:hover, .radial_out:focus, .radial_out:active {
+  color: black; }
+
+.radial_out:hover:before, .radial_out:focus:before, .radial_out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2); }
+
+.radial_in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.radial_in:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  border-radius: 100%;
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.radial_in:hover, .radial_in:focus, .radial_in:active {
+  color: black;
+  background: #fff;
+  /* not sure why i needed to add this background here when it should already be white in .radial_in TODO */ }
+
+.radial_in:hover:before, .radial_in:focus:before, .radial_in:active:before {
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+
+.rectangle_in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.rectangle_in:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.rectangle_in:hover, .rectangle_in:focus, .rectangle_in:active {
+  color: black;
+  background: #fff;
+  /* TODO same here */ }
+
+.rectangle_in:hover:before, .rectangle_in:focus:before, .rectangle_in:active:before {
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+
+.rectangle_out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+  background: #333;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.rectangle_out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.rectangle_out:hover, .rectangle_out:focus, .rectangle_out:active {
+  color: black; }
+
+.rectangle_out:hover:before, .rectangle_out:focus:before, .rectangle_out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2); }
+
+.shutter_in_h {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #fff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.shutter_in_h:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.shutter_in_h:hover, .shutter_in_h:focus, .shutter_in_h:active {
+  color: #000;
+  background: #fff; }
+
+.shutter_in_h:hover:before, .shutter_in_h:focus:before, .shutter_in_h:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0); }
+
+.shutter_out_h {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #333;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.shutter_out_h:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.shutter_out_h:hover, .shutter_out_h:focus, .shutter_out_h:active {
+  color: #000; }
+
+.shutter_out_h:hover:before, .shutter_out_h:focus:before, .shutter_out_h:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+.shutter_in_v {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #fff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.shutter_in_v:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.shutter_in_v:hover, .shutter_in_v:focus, .shutter_in_v:active {
+  color: black;
+  background: #fff; }
+
+.shutter_in_v:hover:before, .shutter_in_v:focus:before, .shutter_in_v:active:before {
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0); }
+
+.shutter_out_v {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #333;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.shutter_out_v:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.shutter_out_v:hover, .shutter_out_v:focus, .shutter_out_v:active {
+  color: black; }
+
+.shutter_out_v:hover:before, .shutter_out_v:focus:before, .shutter_out_v:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1); }
+
+/* test */
+.flipcard {
+  position: relative;
+  width: 220px;
+  height: 160px;
+  perspective: 500px; }
+
+.flipcard.up:hover .front, .flipcard.up.flip .front {
+  transform: rotateX(180deg); }
+
+.flipcard.up:hover .back, .flipcard.up.flip .back {
+  transform: rotateX(0deg); }
+
+.flipcard.up .back {
+  transform: rotateX(-180deg); }
+
+.flipcard.down:hover .front, .flipcard.down.flip .front {
+  transform: rotateX(-180deg); }
+
+.flipcard.down:hover .back, .flipcard.down.flip .back {
+  transform: rotateX(0deg); }
+
+.flipcard.down .back {
+  transform: rotateX(180deg); }
+
+.flipcard.right:hover .front, .flipcard.right.flip .front {
+  transform: rotateY(180deg); }
+
+.flipcard.right:hover .back, .flipcard.right.flip .back {
+  transform: rotateY(0deg); }
+
+.flipcard.right .back {
+  transform: rotateY(-180deg); }
+
+.flipcard.left:hover .front, .flipcard.left.flip .front {
+  transform: rotateY(-180deg); }
+
+.flipcard.left:hover .back, .flipcard.left.flip .back {
+  transform: rotateY(0deg); }
+
+.flipcard.left .back {
+  transform: rotateY(180deg); }
+
+.flipcard .front, .flipcard .back {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in;
+  color: white;
+  background-color: #333;
+  padding: 10px;
+  backface-visibility: hidden; }
+
+@keyframes pulse {
+  50% {
+    transform: scale(0.92, 0.92); }
+  100% {
+    transform: scale(1.01, 1.01); } }
+@keyframes pulseGrow {
+  50% {
+    transform: scale(1.1, 1.1); } }
+@keyframes pulseShrink {
+  50% {
+    transform: scale(0.9, 0.9); } }
+@keyframes push {
+  50% {
+    transform: scale(0.72, 0.72); }
+  100% {
+    transform: scale(1, 1); } }
+@keyframes pop {
+  50% {
+    transform: scale(1.12, 1.12); }
+  100% {
+    transform: scale(1, 1); } }
+@keyframes bounceIn {
+  0% {
+    transform: scale(1, 1); }
+  40% {
+    transform: scale(1.12, 1.12); }
+  75% {
+    transform: scale(1.05, 1.05); }
+  100% {
+    transform: scale(1.12, 1.12); } }
+@keyframes bounceOut {
+  40% {
+    transform: scale(0.85, 0.85); }
+  75% {
+    transform: scale(1, 1); }
+  100% {
+    transform: scale(0.85, 0.85); } }
+@keyframes bob {
+  0% {
+    transform: translate(0px, -5px); }
+  50% {
+    transform: translate(0px, -10px); }
+  100% {
+    transform: translate(0px, -5px); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes hang {
+  0% {
+    transform: translate(0px, 5px); }
+  50% {
+    transform: translate(0px, 10px); }
+  100% {
+    transform: translate(0px, 5px); } }
+@keyframes wobbleHorizontal {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
+@keyframes wobbleVertical {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: translate(0px, -5px); }
+  40% {
+    transform: translate(0px, 5px); }
+  60% {
+    transform: translate(0px, -5px); }
+  80% {
+    transform: translate(0px, 5px); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes wobbleBottomRight {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: translate(5px, 5px); }
+  40% {
+    transform: translate(-5px, -5px); }
+  60% {
+    transform: translate(5px, 5px); }
+  80% {
+    transform: translate(-5px, -5px); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes wobbleBottomLeft {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: translate(-5px, 5px); }
+  40% {
+    transform: translate(5px, -5px); }
+  60% {
+    transform: translate(-5px, 5px); }
+  80% {
+    transform: translate(5px, -5px); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes wobbleTopLeft {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: translate(-5px, -5px); }
+  40% {
+    transform: translate(5px, 5px); }
+  60% {
+    transform: translate(-5px, -5px); }
+  80% {
+    transform: translate(5px, 5px); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes wobbleTopRight {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: translate(5px, -5px); }
+  40% {
+    transform: translate(-5px, 5px); }
+  60% {
+    transform: translate(5px, -5px); }
+  80% {
+    transform: translate(-5px, 5px); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes wobbleTop {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: matrix(1, 0, -0.2, 1, 5, 0); }
+  40% {
+    transform: matrix(1, 0, 0.2, 1, -5, 0); }
+  60% {
+    transform: matrix(1, 0, -0.2, 1, 5, 0); }
+  80% {
+    transform: matrix(1, 0, 0.2, 1, -5, 0); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes wobbleBottom {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: matrix(1, 0, 0.2, 1, 5, 0); }
+  40% {
+    transform: matrix(1, 0, -0.2, 1, -5, 0); }
+  60% {
+    transform: matrix(1, 0, 0.2, 1, 5, 0); }
+  80% {
+    transform: matrix(1, 0, -0.2, 1, -5, 0); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes wobbleSkew {
+  0% {
+    transform: translate(0px, 0px); }
+  20% {
+    transform: matrix(1, 0, -0.2, 1, 0, 0); }
+  40% {
+    transform: matrix(1, 0, 0.2, 1, 0, 0); }
+  60% {
+    transform: matrix(1, 0, -0.2, 1, 0, 0); }
+  80% {
+    transform: matrix(1, 0, 0.2, 1, 0, 0); }
+  100% {
+    transform: translate(0px, 0px); } }
+@keyframes buzz {
+  0% {
+    transform: translate(0px, 0px); }
+  25% {
+    transform: rotate(-1.5deg) translate(-3px, 0px); }
+  50% {
+    transform: rotate(1.5deg) translate(3px, 0px); }
+  75% {
+    transform: rotate(-1.5deg) translate(-3px, 0px); }
+  100% {
+    transform: rotate(1.5deg) translate(3px, 0px); } }
+@keyframes buzzOut {
+  0% {
+    transform: translate(0px, 0px); }
+  25% {
+    transform: rotate(-1.5deg) translate(-3px, 0px); }
+  50% {
+    transform: rotate(1.5deg) translate(3px, 0px); }
+  75% {
+    transform: rotate(-1.5deg) translate(-3px, 0px); }
+  100% {
+    transform: rotate(1.5deg) translate(3px, 0px); } }
+@keyframes backPulse {
+  50% {
+    opacity: 0.6; } }
+@keyframes bounceRight {
+  0% {
+    background-position: 100% 100%; }
+  40% {
+    background-position: 0% 0%; }
+  65% {
+    background-position: 8% 0%; }
+  100% {
+    background-position: 0% 0%; } }
+@keyframes bounceLeft {
+  0% {
+    background-position: 0% 0%; }
+  40% {
+    background-position: 100% 0%; }
+  65% {
+    background-position: 92% 0%; }
+  100% {
+    background-position: 100% 0%; } }
+@keyframes bounceBottom {
+  0% {
+    background-position: 0% 100%; }
+  40% {
+    background-position: 0% 0%; }
+  65% {
+    background-position: 0% 8%; }
+  100% {
+    background-position: 0% 0%; } }
+@keyframes bounceTop {
+  0% {
+    background-position: 0% 0%; }
+  40% {
+    background-position: 0% 100%; }
+  65% {
+    background-position: 0% 90%; }
+  100% {
+    background-position: 0% 100%; } }
+
+/*# sourceMappingURL=new_style.css.map */

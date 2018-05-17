@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flavor Town</title>
+    <link rel="stylesheet" href="new_style.css">
+    <style>
+        .overline_left {
+            display: inline-block;
+            vertical-align: middle;
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .overline_left:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 100%;
+            top: 0;
+            background: thistle;
+            height: 4px;
+            transition: right .3s ease-out;
+        }
+        .overline_left:hover:before, .overline_left:focus:before, .overline_left:active:before {
+            right: 0;
+        }
+        .overline_right {
+            display: inline-block;
+            vertical-align: middle;
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .overline_right:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 100%;
+            right: 0;
+            top: 0;
+            background: thistle;
+            height: 4px;
+            transition: left .3s ease-out;
+        }
+        .overline_right:hover:before, .overline_right:focus:before, .overline_right:active:before {
+            left: 0;
+        }
+       .m {
+        font-size: 1.9em;
+        text-transform: uppercase;
+        
+        font-weight: 600;
+        }
+
+        .m .letter {
+        display: inline-block;
+        line-height: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="2d">
+        <h1>2D Transitions</h1>
+        <div class="links">
+            <a class="grow" href="#">
+                Grow
+            </a>
+            <a class="shrink" href="#">
+                Shrink
+            </a>
+            <a class="pulse" href="#">
+                Pulse
+            </a>
+            <a class="pulseGrow" href="#">
+                Pulse Grow
+            </a>
+            <a class="pulseShrink" href="#">
+                Pulse Shrink
+            </a>
+            <a class="push" href="#">
+                Push
+            </a>
+            <a class="pop" href="#">
+                Pop
+            </a>
+        </div>
+        <div class="links">
+            <a class="bounce-in" href="">Bounce In</a>
+            <a class="bounce-out" href="">Bounce Out</a>
+            <a class="spin" href="">Spin</a>
+            <a class="rotate" href="">Rotate</a>
+            <a class="growtate" href="">Growtate</a>
+            <a class="float" href="">Float</a>
+            <a class="sink" href="">Sink</a>
+            <a class="bob" href="">Bob</a>
+        </div>
+        <div class="links">
+            <a class="hang" href="">Hang</a>
+            <a class="skew" href="">Skew</a>
+            <a class="skew_forward" href="">Skew Forward</a>
+            <a class="skew_backward" href="">Skew Backward</a>
+            <a class="wobble_horizontal" href="">Wobble Horizontal</a>
+        </div>
+        <div class="links">
+            <a class="wobble_vertical" href="">Wobble Vertical</a>
+            <a class="wobble_bottom_right" href="">Wobble to Bottom Right</a>
+            <a class="wobble_bottom_left" href="">Wobble to Bottom Left</a>
+            <a class="wobble_top_right" href="">Wobble to Top Right</a>
+            <a class="wobble_top_left" href="">Wobble to Top Left</a>
+            <a class="wobble_top" href="">Wobble Top</a>
+        </div>
+        <div class="links">
+            <a class="wobble_bottom" href="">Wobble Bottom</a>
+            <a class="wobble_skew" href="">Wobble Skew</a>
+            <a class="buzz" href="">Buzz</a>
+            <a class="buzz_out" href="">Buzz Out</a>
+            <a class="forward" href="">Forward</a>
+            <a class="backward" href="">Backward</a>
+        </div>
+    </div>
+    <div class="bg">
+        <h1>Background Transitions</h1>
+        <div class="links">
+            <a class="fade">Fade</a>
+            <a class="back_pulse">Back Pulse</a>
+            <a class="sweep_right">Sweep to Right</a>
+            <a class="sweep_left">Sweep to Left</a>
+            <a class="sweep_bottom">Sweep to Bottom</a>
+        </div>
+        <div class="links">
+            <a href="" class="sweep_top">Sweep to Top</a>
+            <a href="" class="bounce_right">Bounce to Right</a>
+            <a href="" class="bounce_left">Bounce to Left</a>
+            <a href="" class="bounce_bottom">Bounce to Bottom</a>
+        </div>
+        <div class="links">
+            <a href="" class="bounce_top">Bounce to Top</a>
+            <a href="" class="radial_out">Radial Out</a>
+            <a href="" class="radial_in">Radial_In</a>
+            <a href="" class="rectangle_in">Rectangle In</a>
+            <a href="" class="rectangle_out">Rectangle Out</a>
+        </div>    
+        <div class="links">
+            <a class="shutter_in_h">Shutter in Horizontal</a>
+            <a class="shutter_in_v"> Shutter in Vertical</a>
+            <a class="shutter_out_h">Shutter out Horizontal</a>
+            <a class="shutter_out_v">Shutter out Vertical</a>
+            <a class="shutter_skew"> Shutter Skew</a>
+            <a class="shutter_skew"> Shutter Skew</a>
+        </div>
+    </div>
+    <div class="bt">
+        <h1>Border Transitions</h1>
+        <div class="links">
+            <a href="" class="ripple_out">Ripple Out</a>
+            <a href="" class="ripple_in">Ripple In</a>
+            <a class="underline_left">Underline Left</a>
+            <a class="underline_right">Underline Right</a>
+            <a class="underline_center">Underline Center</a>
+            <a class="underline_reveal">Underline Reveal</a>
+        </div>
+        <div class="links">
+            <a href="" class="overline_left">Overline Left</a>
+            <a href="" class="overline_right">Overline Right</a>
+            <a href="" class="overline_center">Overline Center</a>
+            <a href="" class="overline_reveal">Overline Reveal</a>
+        </div>
+        <div class="links">
+            <div class="flipcard left">
+                
+                    <a href="" class="front">Flip Left</a>
+                    <a href="" class="back">Flip Left Back</a>
+                
+            </div>
+            <!-- <div class="flipcard right">
+                    <a href="" class="front" >Flip Right</a>
+                    <a href="" class="back" >Flip Right Back</a>        
+            </div>
+            <div class="flipcard up">
+                    <a href="" class="front">Flip Up</a>
+                    <a href="" class="back">Flip Up Back</a>
+                
+            </div>
+            <div class="flipcard down">
+                    <a href="" class="front">Flip Down</a>
+                    <a href="" class="back">Flip Down Back</a>
+                    
+            </div> -->
+        </div>
+        
+    </div>
+    <h1 class="m">Sunny mornings</h1>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script >
+        // Wrap every letter in a span
+$('.m').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.m .letter',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: function(el, i) {
+      return 300 + 30 * i;
+    }
+  });
+    </script>
+</body>
+</html>
